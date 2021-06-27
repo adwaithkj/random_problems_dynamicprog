@@ -5,25 +5,20 @@
 # and by the way cacheing is op
 
 def possibilities(m, n, dict1):
-    key1 = str(m)+','+str(n)
-    key2 = str(n)+','+str(n)
+    key = str(m)+','+str(n)
+
     if m == 0 or n == 0:
         return 0
     elif m == 1 and n == 1:
         return 1
-    elif m == 1:
-        return 1
 
-    elif n == 1:
-        return 1
-    elif key1 in dict1:
-        return dict1[key1]
-    elif key2 in dict1:
-        return dict1[key2]
+    elif key in dict1:
+        return dict1[key]
 
     p = possibilities(m-1, n, dict1)+possibilities(m, n-1, dict1)
-    dict1[key1] = p
-    dict1[key2] = p
+
+    dict1[key] = p
+    dict1[key] = p
 
     return p
 
