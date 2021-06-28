@@ -19,16 +19,18 @@ def cansum(targetsum, arr, dict1):
     return False
 
 
-# targetsum = input("Enter the Target Sum =>")
+targetsum = input("Enter the Target Sum =>")
 
-# arr = (input("Enter the array list seperated by spaces=>"))
-# arr = arr.strip().split(" ")
+arr = (input("Enter the array list seperated by spaces=>"))
+arr = arr.strip().split(" ")
 
-# arr = list(map(int, (arr)))
-# print(f" The entered list is {arr} and the target sum is {targetsum}")
+arr = list(map(int, (arr)))
+print(f" The entered list is {arr} and the target sum is {targetsum}")
 
-targetsum = 300
+# targetsum = 300
 
-arr = [7, 14]
+# arr = [7, 14]
+
 dict1 = {}
-print(cansum(targetsum, arr, dict1))
+
+print(f" The boolean result is {cansum(targetsum, arr, dict1)})
